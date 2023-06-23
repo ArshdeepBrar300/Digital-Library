@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <!-- CSS only -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="signup.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Digital Library</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="../signin/signin.html"
+                  >Sign In</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-4 btn btn-light text-dark" href="#"
+                  >Sign Up</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="min-vh-100">
+      <div class="container-fluid">
+        <div class="row">
+          <div
+            class="
+              mt-5 mt-lg-0
+              col-12 col-lg
+              container
+              d-flex
+              flex-column
+              justify-content-center
+              align-items-center
+            "
+          >
+            <h1 class="display-5 mb-3">Join Digital Library</h1>
+            <form
+              id="sign-up-form"
+              class="w-75 form-bg p-5 rounded needs-validation"
+              novalidate
+            >
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="id_email"
+                  placeholder="name@example.com"
+                  required
+                />
+                <label for="id_email" class="form-label">Email</label>
+                <div class="invalid-feedback">
+                  Please provide a valid email.
+                </div>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="id_password"
+                  placeholder="Password"
+                  minlength="6"
+                  required
+                />
+                <label for="id_password" class="form-label">Password</label>
+                <div class="invalid-feedback">
+                  Please must be 6 character long.
+                </div>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="id_confirm_password"
+                  placeholder="Password"
+                  minlength="6"
+                  required
+                />
+                <label for="id_confirm_password" class="form-label"
+                  >Confirm Password</label
+                >
+                <div class="invalid-feedback">Password must match</div>
+              </div>
+              <div class="d-grid">
+                <button class="mt-2 btn btn-primary" type="submit">
+                  Sign Up
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="col-12 col-lg container">
+            <img src="signup-illus.svg" alt="sign-in-illustration" />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="w-100 bg-secondary p-2 text-center text-light">
+      Digital Library © 2021
+    </footer>
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyAJgJV9LQ-CApnciZNx_7wRMlcgoutwN30",
+        authDomain: "it-digital-library.firebaseapp.com",
+        projectId: "it-digital-library",
+        storageBucket: "it-digital-library.appspot.com",
+        messagingSenderId: "340780228752",
+        appId: "1:340780228752:web:46a57f344c1d3a91693815",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+    </script>
+    <script type="module" src="signup.js"></script>
+  </body>
+</html>
